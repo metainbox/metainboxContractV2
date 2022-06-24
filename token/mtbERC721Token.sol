@@ -160,13 +160,13 @@ contract MetaInBoxToken is ERC721EnumerableUpgradeable,AccessControlUpgradeable,
         oldAsset.owner=newOwner;
         Assets[tokenId]=oldAsset;
     }
-    */
+    
     function changeURI(uint256 tokenId,string memory uri) public 
     isExists(tokenId) 
     OnlyMarketplace{
         Uris[tokenId]=uri;
     }
-
+    */
     function BurnToken(address user,uint256 tokenId) public 
     isExists(tokenId) 
     isOnwer(msg.sender,tokenId){//owner of Token can burn this NFT
